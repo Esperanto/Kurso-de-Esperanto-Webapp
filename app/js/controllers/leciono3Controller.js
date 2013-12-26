@@ -4,25 +4,14 @@
 /**
  * controller of the lesson 1
  */
-angular.module("leciono1Controller", ["i18n","services"])
-    .controller("leciono1Controller", function ($scope,$location,$route,i18n,locale) {
+angular.module("leciono3Controller", ["i18n","services"])
+    .controller("leciono3Controller", function ($scope,$location,$route,i18n,locale) {
         i18n.set();
 
         $scope.changeLang=function(){
             locale.lang="franca";
             $route.reload();
         }
-
-        $scope.setLang=function(lang){
-            locale.lang=lang;
-            $route.reload();
-        }
-
-        $scope.activeLang=function(lang){
-            if(locale.lang===lang)
-                return "active";
-        }
-
 
         /**
          * Test if the route is active

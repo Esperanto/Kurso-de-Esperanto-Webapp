@@ -1,17 +1,60 @@
 <div class="container">
-    <form class="form-horizontal" role="form">
-        <div class="form-group">
-            <label for="selectLang" class="col-sm-2 control-label">Language</label>
-            <div class="col-sm-10">
-                <select id="selectLang" class="form-control" style="width: 20%">
-                    <option>english</option>
-                    <option>français</option>
-                    <option>arabe</option>
-                    <option>kabyle</option>
-                    <option>german</option>
-                </select>
-            </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <p> <h3><img src="img/ikonoj/traduko.png"/>{{ 'Konfig.Label1' | translate }} </h3></p>
+            <table class="table">
+               <tbody>
+               <tr>
+                   <td><a href="" ng-click="setLang('angla')" ng-class="activeLang('angla')"  class="btn btn-default btn-block">English (angla)</a></td>
+                   <td><a href="" ng-click="setLang('araba')" ng-class="activeLang('araba')" class="btn btn-default btn-block">العربية(Araba)</a></td>
+                   <td><a href="" ng-click="setLang('bulgara')" ng-class="activeLang('bulgara')" class="btn btn-default btn-block">Български (bulgara)</a></td>
+                   <td><a href="" ng-click="setLang('ceha')" ng-class="activeLang('ceha')" class="btn btn-default btn-block">česky (ĉeĥa)</a></td>
+               </tr>
+               <tr>
+                   <td><a href="" ng-click="setLang('dana')" ng-class="activeLang('dana')"  class="btn btn-default btn-block">Dansk (dana)</a></td>
+                   <td><a href="" ng-click="setLang('finna')" ng-class="activeLang('finna')" class="btn btn-default btn-block">Suomi (finna)</a></td>
+                   <td><a href="" ng-click="setLang('franca')" ng-class="activeLang('franca')" class="btn btn-default btn-block">Français (franca)</a></td>
+                   <td><a href="" ng-click="setLang('germana')" ng-class="activeLang('germana')"  class="btn btn-default btn-block">Deutsch (germana)</a></td>
+               </tr>
+               <tr>
+                   <td><a href="" ng-click="setLang('greka')" ng-class="activeLang('greka')" class="btn btn-default btn-block">λληνικά (greka)</a></td>
+                   <td><a href="" ng-click="setLang('hispana')" ng-class="activeLang('hispana')" class="btn btn-default btn-block">Español (hispana)</a></td>
+                   <td><a href="" ng-click="setLang('hungara')" ng-class="activeLang('hungara')" class="btn btn-default btn-block">Magyar (hungara)</a></td>
+                   <td><a href="" ng-click="setLang('indonezia')" ng-class="activeLang('indonezia')" class="btn btn-default btn-block">Bahasa Indonesia (indonezia)</a></td>
+               </tr>
+               <tr>
+                   <td><a href="" ng-click="setLang('islanda')" ng-class="activeLang('islanda')" class="btn btn-default btn-block">Islenska (islanda)</a></td>
+                   <td><a href="" ng-click="setLang('itala')" ng-class="activeLang('itala')" class="btn btn-default btn-block">Italiano (itala)</a></td>
+                   <td><a href="" ng-click="setLang('japana')" ng-class="activeLang('japana')" class="btn btn-default btn-block">日本語 (japana)</a></td>
+                   <td><a href="" ng-click="setLang('kataluna')" ng-class="activeLang('kataluna')" class="btn btn-default btn-block">Català (kataluna)</a></td>
+               </tr>
+               <tr>
+                   <td><a href="" ng-click="setLang('korea')" ng-class="activeLang('korea')" class="btn btn-default btn-block">한국어 (korea)</a></td>
+                   <td><a href="" ng-click="setLang('kroata')" ng-class="activeLang('kroata')" class="btn btn-default btn-block">Hrvatski (kroata)</a></td>
+                   <td><a href="" ng-click="setLang('latva')" ng-class="activeLang('latva')" class="btn btn-default btn-block">Latviešu (latva)</a></td>
+                   <td><a href="" ng-click="setLang('litova')" ng-class="activeLang('litova')" class="btn btn-default btn-block">Lietuviškai (litova)</a></td>
+               </tr>
+               <tr>
+                   <td><a href="" ng-click="setLang('nederlanda')" ng-class="activeLang('nederlanda')" class="btn btn-default btn-block">Nederlands (nederlanda)</a></td>
+                   <td><a href="" ng-click="setLang('pola')" ng-class="activeLang('pola')" class="btn btn-default btn-block">polski (pola)</a></td>
+                   <td><a href="" ng-click="setLang('portugala')" ng-class="activeLang('portugala')" class="btn btn-default btn-block">Português (portugala)</a></td>
+                   <td><a href="" ng-click="setLang('rusa')" ng-class="activeLang('rusa')" class="btn btn-default btn-block">Русский  (rusa)</a></td>
+               </tr>
+               <tr>
+                   <td><a href="" ng-click="setLang('rusa2')" ng-class="activeLang('rusa2')" class="btn btn-default btn-block">Русский  (rusa [2])</a></td>
+                   <td><a href="" ng-click="setLang('serba')" ng-class="activeLang('serba')" class="btn btn-default btn-block">srpski (serba)</a></td>
+                   <td><a href="" ng-click="setLang('slovaka')" ng-class="activeLang('slovaka')" class="btn btn-default btn-block">Slovenčina (slovaka)</a></td>
+                   <td><a href="" ng-click="setLang('slovena')" ng-class="activeLang('slovena')" class="btn btn-default btn-block">Slovenščina (slovena)</a></td>
+               </tr>
+               <tr>
+                   <td><a href="" ng-click="setLang('sveda')" ng-class="activeLang('sveda')" class="btn btn-default btn-block">Svenska (sveda)</a></td>
+                   <td><a href="" ng-click="setLang('turka')" ng-class="activeLang('turka')" class="btn btn-default btn-block">Türkçe (turka)</a></td>
+                   <td><a href="" ng-click="setLang('vjetnama')" ng-class="activeLang('vjetnama')" class="btn btn-default btn-block">Tiếng Việt (vjetnama)</a></td>
+               </tr>
+               </tbody>
+            </table>
         </div>
-        </form>
+        <div class="col-xs-6"></div>
+    </div>
 
 </div>
