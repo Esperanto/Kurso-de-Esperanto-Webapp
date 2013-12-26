@@ -2,9 +2,12 @@
  * Created by ahmed on 12/25/13.
  */
 
+/**
+ * Module i18n
+ */
 
-angular.module('i18n', [])
-    .factory('i18n',function($http){
+angular.module('i18n', ["services"])
+    .factory('i18n',function($http,locale){
 
         function Chain() {
             var _this = this;
@@ -23,11 +26,11 @@ angular.module('i18n', [])
 
         var json=undefined;
         return {
-            set:function(locale){
+            set:function(){
                 var chain = new Chain();
                 $http({
                     method: "GET",
-                    url:"lang/"+locale+".json"
+                    url:"lang/"+locale.lang+".json"
                 }).success(function (data) {
                         json = eval(data);
                         if (typeof chain.success === "function")
