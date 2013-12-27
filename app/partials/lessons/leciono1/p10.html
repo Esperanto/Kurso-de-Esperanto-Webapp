@@ -1,1 +1,100 @@
-<div>Hello this is part 10 of leciono1 <img style="width: 200px" src="img/ikonoj/workInProgress.jpg"/></div>
+<div>
+    <p> <h4>{{ 'Lec01.Label59' | translate }} </h4></p>
+    <p> {{ 'Lec01.Label68' | translate }}</p>
+
+    <div class="row">
+        <div class="col-md-11">
+            <table class="table table-bordered ">
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <a href="" ng-click="listenAndWrite.turnOn()"><img
+                                        src="img/ikonoj/ekzercoj/komenci{{ (listenAndWrite.on || '') && '-disabled'}}.png"/>{{listenAndWrite.playBtn}}</a>
+                                <a href="" ng-click="listenAndWrite.turnOff()"><img
+                                        src="img/ikonoj/ekzercoj/halti{{ (!listenAndWrite.on || '') && '-disabled'}}.png"/>
+                                </a>
+                            </div>
+                            <div class="col-md-7">
+                                <ul class="list-inline">
+                                    <li>
+                                        <ul class="list-inline well">
+                                            <li>
+                                                <img src="img/ikonoj/kubeto.png"/>
+                                            </li>
+                                            <li><span class="lead">{{listenAndWrite.remainList.length+listenAndWrite.unclickedList.length}}</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul class="list-inline well">
+                                            <li>
+                                                <img height="32" src="img/ikonoj/ekzercoj/bone.png"/>
+                                            </li>
+                                            <li><span class="lead"> {{listenAndWrite.rightClicks()}}</span></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul class="list-inline well">
+                                            <li>
+                                                <img height="32" src="img/ikonoj/ekzercoj/malbone.png"/>
+                                            </li>
+                                            <li><span class="lead"> {{listenAndWrite.wrongClicks}}</span></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul class="list-inline well">
+                                            <li>
+                                                <img src="img/ikonoj/kalkulilo.png"/>
+                                            </li>
+                                            <li><span class="lead"> {{100 * listenAndWrite.rightClicks() / listenAndWrite.entireList.length | number:0}}%</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table class="table">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <textarea class="btn-block " ng-model="listenAndWrite.textArea"
+                                                      readonly="true" rows="10"></textarea>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5 col-md-offset-4">
+                                    <div class="row" ng-show="listenAndWrite.wrong">
+                                        <div class="col-md-6 col-md-offset-2">
+                                            <strong class="text-danger">{{ listenAndWrite.playedWord }}</strong>
+                                        </div>
+                                    </div>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <input style="text-align:center" type="text" ng-model="listenAndWrite.input"></li>
+                                        <li>
+                                            <a href="" ng-click="listenAndWrite.submit(listenAndWrite.input)"><img
+                                                    height="32"
+                                                    src="img/ikonoj/ekzercoj/validi{{ (!listenAndWrite.on || '') && '-disabled'}}.png"/></a>
+                                        </li>
+                                        <li>
+                                            <a href="" ng-click="listenAndWrite.replaySound()"><img height="32"
+                                                                                                    src="img/ikonoj/ekzercoj/auskultu-denove{{ (!listenAndWrite.on || '') && '-disabled'}}.png"/></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    Hello this is part 10 of leciono1 <img style="width: 200px" src="img/ikonoj/workInProgress.jpg"/></div>
