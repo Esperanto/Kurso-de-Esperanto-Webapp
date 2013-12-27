@@ -286,4 +286,86 @@ angular.module('services', []).factory('locale',function () {
         }
 
         return obj;
-    });
+    }).factory('listenAndRepeat',function (resources,utils,$timeout) {
+        var obj={
+            // the entire list of items loaded from the resources
+            entireList: [],
+            // the list that contains the remain items to display
+            remainList: [],
+            // object of the sound played
+            playedSound: undefined,
+            // string that contains the word played
+            playedWord:"",
+            // is the game On or Off
+            on: false,
+            isPlaying:false,
+            progress:0,
+            count:2,
+            countToPlay:2,
+            // load the entire list from the resources
+            loadList: function () {
+                resources.load("ekz01").success(function (data) {
+                    angular.forEach(eval(data)['0101D'], function (value) {
+                        obj.entireList.push(value);
+                    });
+                    obj.remainList = angular.copy(obj.entireList);
+
+                })
+            },
+            // turn On the game
+            turnOn: function () {
+                obj.on = true;
+                obj.nextSounds();
+            },
+            // turn Off the game
+            turnOff: function () {
+                obj.on = false;
+                obj.wrongClicks=0;
+                obj.remainList = angular.copy(obj.entireList);
+            },
+            // play a random sound
+            playSound: function () {
+                console.log("Play Sound!")
+                var index = Math.floor((Math.random() * obj.remainList.length));
+                var soundToPlay = obj.remainList[index];
+                obj.playedWord = soundToPlay;
+                var sound = soundManager.createSound({
+                    url: 'sounds/lec01/' + utils.replaceSpecialChars(soundToPlay) + '.ogg'
+                });
+                sound.play();
+                obj.playing();
+                obj.playedSound=sound;
+            }, replaySound:function(){
+                if(obj.on){
+                    obj.playedSound.play();
+                    obj.playing();
+                }
+            },
+            playing:function(){
+                obj.isPlaying=true;
+                obj.progress=0;
+                $timeout(function(){
+                    obj.isPlaying=false;
+                    for(var i=0;i<4;i++){
+                        (function(i){
+                            $timeout(function(){
+                                console.log(i);
+                                obj.progress=i*100/3;
+                            },(i+1)*500);
+                        })(i);
+                    }
+                    obj.countToPlay--;
+                },2000);
+            },
+            nextSounds:function(){
+                obj.countToPlay=obj.count;
+                obj.playSound();
+                for(var i=0;i<obj.count-1;i++){
+                    $timeout(function(){
+                        obj.playSound();
+                    },(i+1)*4000);
+                }
+            }
+        };
+        return obj;
+    });;

@@ -1,6 +1,6 @@
 <div>
-    <p> <h4>{{ 'Lec01.Label3' | translate }} </h4></p>
-    <p> {{ 'Lec01.Label6' | translate }}</p>
+    <p> <h4>{{ 'Gheneralaj.TFrame2.PP_Label1' | translate }} </h4></p>
+    <p> {{ 'Gheneralaj.TFrame2.PP_Label41' | translate }}</p>
 
     <div class="row">
         <div class="col-md-11">
@@ -10,10 +10,11 @@
                     <td>
                         <div class="row">
                             <div class="col-md-5">
-                                <a href="" ng-click="p2.turnOn()"><img
-                                        src="img/ikonoj/ekzercoj/komenci{{ (p2.on || '') && '-disabled'}}.png"/></a>
-                                <a href="" ng-click="p2.turnOff()"><img
-                                        src="img/ikonoj/ekzercoj/halti{{ (!p2.on || '') && '-disabled'}}.png"/> </a>
+                                <a href="" ng-click="listenAndRepeat.turnOn()"><img
+                                        src="img/ikonoj/ekzercoj/komenci{{ (listenAndRepeat.on || '') && '-disabled'}}.png"/></a>
+                                <a href="" ng-click="listenAndRepeat.turnOff()"><img
+                                        src="img/ikonoj/ekzercoj/halti{{ (!listenAndRepeat.on || '') && '-disabled'}}.png"/>
+                                </a>
                             </div>
                         </div>
                         <br/>
@@ -27,7 +28,7 @@
                                                 <img src="img/ikonoj/kubeto.png"/>
                                             </li>
                                             <li><span
-                                                    class="lead">{{p2.remainList.length+p2.unclickedList.length}}</span>
+                                                    class="lead">{{listenAndRepeat.remainList.length+listenAndRepeat.unclickedList.length}}</span>
                                             </li>
                                         </ul>
                                     </li>
@@ -41,47 +42,43 @@
                                         <h5>vortoj</h5>
                                         <ul class="list-unstyled">
                                             <li>
-                                                <input type="checkbox"> 1
+                                                <input type="radio" ng-model="listenAndRepeat.count" value="1"> 1
                                             </li>
                                             <li>
-                                                <input type="checkbox"> 2
+                                                <input type="radio" ng-model="listenAndRepeat.count" value="2"> 2
                                             </li>
                                             <li>
-                                                <input type="checkbox"> 4
+                                                <input type="radio" ng-model="listenAndRepeat.count" value="4"> 4
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-5 col-md-offset-1">
-                                <table class="table">
-                                    <tbody>
-                                    <tr ng-repeat="trList in p2.randomList track by $index">
-                                        <td ng-repeat="value in trList track by $index">
-                                            <a href="" ng-click="p2.clickBtn(value)"
-                                               class="btn btn-default btn-block {{ (!p2.on || '') && 'disabled'}} {{p2.activeBtn(value)}}">{{value}}</a>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                                <div class="row">
+                                    <div class="col-md-5 col-md-offset-3">
+                                        <img ng-show="listenAndRepeat.isPlaying" src="img/ikonoj/auskultilo.png"/>
+                                        <img ng-show="!listenAndRepeat.isPlaying" src="img/ikonoj/mikrofono.png"/>
+                                    </div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                         aria-valuemax="100" style="width: {{listenAndRepeat.progress}}%;">
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-2 col-md-offset-1">
                                 <ul class="list-unstyled">
                                     <li>
-                                        <a href="" ng-click=""><img
-                                                src="img/ikonoj/ekzercoj/paroli-denove.png"/> </a>
+                                        <a href="" ng-click="listenAndRepeat.replaySound()"><img
+                                                src="img/ikonoj/ekzercoj/auskultu-denove{{ (listenAndRepeat.countToPlay!=0 || '') && '-disabled'}}.png"/> </a>
                                     </li>
                                     <li>
-                                        <a href="" ng-click=""><img
-                                                src="img/ikonoj/ekzercoj/auskultu-denove.png"/> </a>
-                                    </li>
-                                    <li>
-                                        <a href="" ng-click=""><img
-                                                src="img/ikonoj/ekzercoj/antauen.png"/> </a>
+                                        <a href="" ng-click="listenAndRepeat.nextSounds()"><img
+                                                src="img/ikonoj/ekzercoj/antauen{{ (listenAndRepeat.countToPlay!=0 || '') && '-disabled'}}.png"/> </a>
                                     </li>
                                 </ul>
                             </div>
-
                         </div>
                         <div class="row">
                             <div class="col-md-5">
