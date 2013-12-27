@@ -354,7 +354,8 @@ angular.module('services', []).factory('locale',function () {
                             },(i+1)*500);
                         })(i);
                     }
-                    obj.countToPlay--;
+                    if(obj.countToPlay>0)
+                        obj.countToPlay--;
                 },2000);
             },
             nextSounds:function(){
@@ -368,4 +369,4 @@ angular.module('services', []).factory('locale',function () {
             }
         };
         return obj;
-    });;
+    });

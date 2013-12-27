@@ -10,5 +10,4 @@ angular.module("homeController", ["i18n","services"])
         $scope.getLang=function(){
           return locale.lang;
         }
-
     });

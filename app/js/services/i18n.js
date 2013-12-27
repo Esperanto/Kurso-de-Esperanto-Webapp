@@ -7,7 +7,7 @@
  */
 
 angular.module('i18n', ["services"])
-    .factory('i18n',function($http,locale){
+    .factory('i18n',function($http,$cookies,locale){
 
         function Chain() {
             var _this = this;
@@ -25,6 +25,9 @@ angular.module('i18n', ["services"])
         }
 
         var json=undefined;
+        console.log($cookies.locale,"---------------")
+        if($cookies.locale)
+            locale.lang=$cookies.locale;
         return {
             set:function(){
                 var chain = new Chain();

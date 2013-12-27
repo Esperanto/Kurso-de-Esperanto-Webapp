@@ -19,15 +19,6 @@ angular.module("leciono1Controller", ["i18n", "services"])
             $route.reload();
         }
 
-        $scope.setLang = function (lang) {
-            locale.lang = lang;
-            $route.reload();
-        }
-
-        $scope.activeLang = function (lang) {
-            if (locale.lang === lang)
-                return "active";
-        }
 
 
         /**
