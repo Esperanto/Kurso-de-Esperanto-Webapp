@@ -1,0 +1,4 @@
+/* app css stylesheet */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
