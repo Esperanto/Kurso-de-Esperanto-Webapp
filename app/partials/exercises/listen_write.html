@@ -1,0 +1,96 @@
+<div class="row">
+    <div class="col-md-11">
+        <table class="table table-bordered ">
+            <tbody>
+            <tr>
+                <td>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <a href="" ng-click="listen_write.turnOn()"><img
+                                    src="img/ikonoj/ekzercoj/komenci{{ (listen_write.on || '') && '-disabled'}}.png"/>{{listen_write.playBtn}}</a>
+                            <a href="" ng-click="listen_write.turnOff()"><img
+                                    src="img/ikonoj/ekzercoj/halti{{ (!listen_write.on || '') && '-disabled'}}.png"/>
+                            </a>
+                        </div>
+                        <div class="col-md-7">
+                            <ul class="list-inline">
+                                <li>
+                                    <ul class="list-inline well">
+                                        <li>
+                                            <img src="img/ikonoj/kubeto.png"/>
+                                        </li>
+                                        <li><span class="lead">{{listen_write.remainList.length+listen_write.unclickedList.length}}</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="list-inline well">
+                                        <li>
+                                            <img height="32" src="img/ikonoj/ekzercoj/bone.png"/>
+                                        </li>
+                                        <li><span class="lead"> {{listen_write.rightClicks()}}</span></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="list-inline well">
+                                        <li>
+                                            <img height="32" src="img/ikonoj/ekzercoj/malbone.png"/>
+                                        </li>
+                                        <li><span class="lead"> {{listen_write.wrongClicks}}</span></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="list-inline well">
+                                        <li>
+                                            <img src="img/ikonoj/kalkulilo.png"/>
+                                        </li>
+                                        <li><span class="lead"> {{100 * listen_write.rightClicks() / (listen_write.wrongClicks+listen_write.rightClicks()) | number:0}}%</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <textarea class="btn-block " ng-model="listen_write.textArea"
+                                                  readonly="true" rows="10"></textarea>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5 col-md-offset-4">
+                                <div class="row" ng-show="listen_write.wrong">
+                                    <div class="col-md-6 col-md-offset-2">
+                                        <strong class="text-danger">{{ listen_write.playedWord }}</strong>
+                                    </div>
+                                </div>
+                                <ul class="list-inline">
+                                    <li>
+                                        <input style="text-align:center" type="text"
+                                               ng-model="listen_write.input"></li>
+                                    <li>
+                                        <a href="" ng-click="listen_write.submit(listen_write.input)"><img
+                                                height="32"
+                                                src="img/ikonoj/ekzercoj/validi{{ (!listen_write.on || '') && '-disabled'}}.png"/></a>
+                                    </li>
+                                    <li>
+                                        <a href="" ng-click="listen_write.replaySound()"><img height="32"
+                                                                                              src="img/ikonoj/ekzercoj/auskultu-denove{{ (!listen_write.on || '') && '-disabled'}}.png"/></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

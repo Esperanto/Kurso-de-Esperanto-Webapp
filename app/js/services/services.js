@@ -55,7 +55,7 @@ angular.module('services', []).factory('locale',function () {
                 return value;
             }
         }
-    }).factory('listenAndClick', function (resources, utils, $timeout, $filter) {
+    }).factory('listen_click', function (resources, utils, $timeout, $filter) {
         /**
          * code that manage the game of  Leciono1 part 2
          */
@@ -78,12 +78,13 @@ angular.module('services', []).factory('locale',function () {
             playedWord: "",
             // is the game On or Off
             on: false,
-
+            leciono:"01",
             // load the entire list from the resources
-            loadList: function () {
+            loadList: function (leciono,part) {
+                obj.leciono=leciono
                 if (!obj.entireList.length) {
-                    resources.load("ekz01").success(function (data) {
-                        angular.forEach(eval(data)['0101D'], function (value) {
+                    resources.load("ekz"+leciono).success(function (data) {
+                        angular.forEach(eval(data)[part], function (value) {
                             obj.entireList.push(value);
                         });
                         obj.remainList = angular.copy(obj.entireList);
@@ -161,7 +162,7 @@ angular.module('services', []).factory('locale',function () {
                 var soundToPlay = obj.unclickedList[index];
                 obj.playedWord = soundToPlay;
                 var sound = soundManager.createSound({
-                    url: 'sounds/lec01/' + utils.replaceSpecialChars(soundToPlay) + '.ogg'
+                    url: 'sounds/lec'+obj.leciono+'/' + utils.replaceSpecialChars(soundToPlay) + '.ogg'
                 });
                 sound.play();
                 obj.playedSound = sound;
@@ -190,7 +191,7 @@ angular.module('services', []).factory('locale',function () {
         return obj;
     })
 
-    .factory('listenAndWrite',function (resources, utils, $timeout) {
+    .factory('listen_write',function (resources, utils, $timeout) {
         var obj = {
             // the entire list of items loaded from the resources
             entireList: [],
@@ -205,16 +206,18 @@ angular.module('services', []).factory('locale',function () {
             wrong: false,
             textArea: "",
             input: "",
+            leciono:"01",
             // load the entire list from the resources
-            loadList: function () {
+            loadList: function (leciono,part) {
+                obj.leciono=leciono;
                 if (!obj.entireList.length) {
-                    resources.load("ekz01").success(function (data) {
-                        angular.forEach(eval(data)['0101D'], function (value) {
+                    resources.load("ekz"+obj.leciono).success(function (data) {
+                        angular.forEach(eval(data)[part], function (value) {
                             obj.entireList.push(value);
                         });
                         obj.remainList = angular.copy(obj.entireList);
 
-                    })
+                    });
                 }
             },
             // turn On the game
@@ -235,7 +238,7 @@ angular.module('services', []).factory('locale',function () {
                 var soundToPlay = obj.remainList[index];
                 obj.playedWord = soundToPlay;
                 var sound = soundManager.createSound({
-                    url: 'sounds/lec01/' + utils.replaceSpecialChars(soundToPlay) + '.ogg'
+                    url: 'sounds/lec'+obj.leciono+'/' + utils.replaceSpecialChars(soundToPlay) + '.ogg'
                 });
                 sound.play();
                 obj.playedSound = sound;
@@ -253,7 +256,7 @@ angular.module('services', []).factory('locale',function () {
                 sound.play();
             },
             submit: function (value) {
-                if (obj.on) {
+                if (obj.on && value != "") {
                     var wordToWrite = utils.replaceSpecialChars(obj.playedWord);
                     if (wordToWrite == value) {
                         obj.textArea += value + "\n";
@@ -262,14 +265,13 @@ angular.module('services', []).factory('locale',function () {
                         obj.remainList.splice(index, 1);
                     }
                     else {
-                        if (value != "") {
                             obj.wrongClicks++;
                             obj.playWrongSound();
                             obj.wrong = true;
                             $timeout(function () {
                                 obj.wrong = false;
+                                obj.input = "";
                             }, 1500);
-                        }
                     }
                     setTimeout(function () {
                         obj.playSound();
@@ -287,11 +289,10 @@ angular.module('services', []).factory('locale',function () {
             }
 
         }
-
         return obj;
     })
 
-    .factory('listenAndRepeat', function (resources, utils, $timeout) {
+    .factory('listen_repeat', function (resources, utils, $timeout) {
         var obj = {
             // the entire list of items loaded from the resources
             entireList: [],
@@ -307,11 +308,14 @@ angular.module('services', []).factory('locale',function () {
             progress: 0,
             count: 2,
             countToPlay: 2,
+            time:2,
+            leciono:"01",
             // load the entire list from the resources
-            loadList: function () {
+            loadList: function (leciono,part) {
+                obj.leciono=leciono;
                 if (!obj.entireList.length) {
-                    resources.load("ekz01").success(function (data) {
-                        angular.forEach(eval(data)['0101D'], function (value) {
+                    resources.load("ekz"+leciono).success(function (data) {
+                        angular.forEach(eval(data)[part], function (value) {
                             obj.entireList.push(value);
                         });
                         obj.remainList = angular.copy(obj.entireList);
@@ -335,9 +339,10 @@ angular.module('services', []).factory('locale',function () {
                 console.log("Play Sound!")
                 var index = Math.floor((Math.random() * obj.remainList.length));
                 var soundToPlay = obj.remainList[index];
+                obj.remainList.splice(index,1);
                 obj.playedWord = soundToPlay;
                 var sound = soundManager.createSound({
-                    url: 'sounds/lec01/' + utils.replaceSpecialChars(soundToPlay) + '.ogg'
+                    url: 'sounds/lec'+obj.leciono+'/' + utils.replaceSpecialChars(soundToPlay) + '.ogg'
                 });
                 sound.play();
                 obj.playing();
@@ -353,16 +358,16 @@ angular.module('services', []).factory('locale',function () {
                 obj.progress = 0;
                 $timeout(function () {
                     obj.isPlaying = false;
-                    for (var i = 0; i < 4; i++) {
+                    for (var i = 1; i <= 2*obj.time; i++) {
                         (function (i) {
                             $timeout(function () {
                                 console.log(i);
-                                obj.progress = i * 100 / 3;
-                            }, (i + 1) * 500);
+                                obj.progress = i * 100 / (2*obj.time);
+                                if (i==2*obj.time && obj.countToPlay > 0)
+                                    obj.countToPlay--;
+                            }, i * 500);
                         })(i);
                     }
-                    if (obj.countToPlay > 0)
-                        obj.countToPlay--;
                 }, 2000);
             },
             nextSounds: function () {
@@ -371,7 +376,7 @@ angular.module('services', []).factory('locale',function () {
                 for (var i = 0; i < obj.count - 1; i++) {
                     $timeout(function () {
                         obj.playSound();
-                    }, (i + 1) * 4000);
+                    }, (i + 1) * obj.time*2000);
                 }
             }
         };

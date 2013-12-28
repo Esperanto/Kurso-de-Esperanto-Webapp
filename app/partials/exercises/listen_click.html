@@ -1,0 +1,91 @@
+<div>
+    <div class="row">
+        <div class="col-md-11">
+            <table class="table table-bordered ">
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <a href="" ng-click="listen_click.turnOn()" ><img src="img/ikonoj/ekzercoj/komenci{{ (listen_click.on || '') && '-disabled'}}.png"/>{{listen_click.playBtn}}</a>
+                                <a href="" ng-click="listen_click.turnOff()"><img src="img/ikonoj/ekzercoj/halti{{ (!listen_click.on || '') && '-disabled'}}.png"/> </a>
+                            </div>
+                            <div class="col-md-7">
+                                <ul class="list-inline">
+                                    <li>
+                                        <ul class="list-inline well">
+                                            <li>
+                                                <img src="img/ikonoj/kubeto.png"/>
+                                            </li>
+                                            <li><span class="lead">{{listen_click.remainList.length+listen_click.unclickedList.length}}</span></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul class="list-inline well">
+                                            <li>
+                                                <img height="32" src="img/ikonoj/ekzercoj/bone.png"/>
+                                            </li>
+                                            <li><span class="lead"> {{listen_click.rightClicks()}}</span></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul class="list-inline well">
+                                            <li>
+                                                <img height="32" src="img/ikonoj/ekzercoj/malbone.png"/>
+                                            </li>
+                                            <li><span class="lead"> {{listen_click.wrongClicks}}</span></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul class="list-inline well">
+                                            <li>
+                                                <img src="img/ikonoj/kalkulilo.png"/>
+                                            </li>
+                                            <li><span class="lead"> {{100 * listen_click.rightClicks() / (listen_click.wrongClicks+listen_click.rightClicks()) | number:0}}%</span></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5 col-md-offset-3">
+                                <table class="table">
+                                    <tbody>
+                                    <tr ng-repeat="trList in listen_click.randomList track by $index">
+                                        <td ng-repeat="value in trList track by $index">
+                                            <a href="" ng-click="listen_click.clickBtn(value)"
+                                               class="btn btn-default btn-block {{ (!listen_click.on || '') && 'disabled'}} {{listen_click.activeBtn(value)}}">{{value}}</a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5 col-md-offset-5">
+                                    <a href="" ng-click="listen_click.replaySound()"><img height="32" src="img/ikonoj/ekzercoj/auskultu-denove{{ (!listen_click.on || '') && '-disabled'}}.png"/></a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="result" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">*</h4>
+                </div>
+                <div class="modal-body">
+                    {{listen_click.message()}}
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div>

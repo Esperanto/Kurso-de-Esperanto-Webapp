@@ -5,14 +5,14 @@
  * controller of the lesson 1
  */
 angular.module("leciono1Controller", ["i18n", "services"])
-    .controller("leciono1Controller", function ($scope, $location, $route ,$filter, i18n, locale, resources,utils,listenAndClick,listenAndWrite,listenAndRepeat) {
+    .controller("leciono1Controller", function ($scope, $location, $route ,$filter, i18n, locale, resources,utils,listen_click,listen_write,listen_repeat) {
         i18n.set();
-        $scope.listenAndClick=listenAndClick;
-        listenAndClick.loadList();
-        $scope.listenAndRepeat=listenAndRepeat;
-        listenAndRepeat.loadList();
-        $scope.listenAndWrite=listenAndWrite;
-        listenAndWrite.loadList();
+        $scope.listen_click=listen_click;
+        listen_click.loadList("01","0101D");
+        $scope.listen_repeat=listen_repeat;
+        listen_repeat.loadList("01","0101D");
+        $scope.listen_write=listen_write;
+        listen_write.loadList("01","0101D");
 
 
         /**

@@ -4,6 +4,45 @@
 
 
 angular.module('directives', [])
+//********************Exercices****************************///
+    .directive("listenClick",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/exercises/listen_click.html',
+            replace: true
+        }
+    })
+    .directive("listenRepeat",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/exercises/listen_repeat.html',
+            replace: true
+        }
+    })
+    .directive("listenWrite",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/exercises/listen_write.html',
+            replace: true
+        }
+    })
+
+//********************leciono1******************************//
     .directive("leciono1p1",function () {
         return {
             link: function (scope, element, attrs) {

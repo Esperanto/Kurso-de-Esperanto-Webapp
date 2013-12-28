@@ -1,0 +1,111 @@
+<div class="row">
+    <div class="col-md-11">
+        <table class="table table-bordered ">
+            <tbody>
+            <tr>
+                <td>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <a href="" ng-click="listen_repeat.turnOn()"><img
+                                    src="img/ikonoj/ekzercoj/komenci{{ (listen_repeat.on || '') && '-disabled'}}.png"/></a>
+                            <a href="" ng-click="listen_repeat.turnOff()"><img
+                                    src="img/ikonoj/ekzercoj/halti{{ (!listen_repeat.on || '') && '-disabled'}}.png"/>
+                            </a>
+                        </div>
+                    </div>
+                    <br/>
+
+                    <div class="row">
+                        <div class="col-md-7">
+                            <ul class="list-inline">
+                                <li>
+                                    <ul class="list-inline well">
+                                        <li>
+                                            <img src="img/ikonoj/kubeto.png"/>
+                                        </li>
+                                        <li><span
+                                                class="lead">{{listen_repeat.remainList.length+listen_repeat.unclickedList.length}}</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="row">
+                                <div class="col-md-3 col-md-offset-1">
+                                    <h5>Vortoj</h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <input type="radio" ng-model="listen_repeat.count" value="1"> 1
+                                        </li>
+                                        <li>
+                                            <input type="radio" ng-model="listen_repeat.count" value="2"> 2
+                                        </li>
+                                        <li>
+                                            <input type="radio" ng-model="listen_repeat.count" value="4"> 4
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-md-offset-1">
+                            <div class="row">
+                                <div class="col-md-5 col-md-offset-3">
+                                    <img ng-show="listen_repeat.isPlaying" src="img/ikonoj/auskultilo.png"/>
+                                    <img ng-show="!listen_repeat.isPlaying" src="img/ikonoj/mikrofono.png"/>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                     aria-valuemax="100" style="width: {{listen_repeat.progress}}%;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-md-offset-1">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="" ng-click="listen_repeat.replaySound()"><img
+                                            src="img/ikonoj/ekzercoj/paroli-denove{{ (listen_repeat.countToPlay!=0 || '') && '-disabled'}}.png"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" ng-click="listen_repeat.nextSounds()"><img
+                                            src="img/ikonoj/ekzercoj/antauen{{ (listen_repeat.countToPlay!=0 || '') && '-disabled'}}.png"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="row">
+                                <div class="col-md-12 col-md-offset-1">
+                                    <ul class="list-inline">
+                                        <li>
+                                            <img src="img/ikonoj/kronometro.png"/>
+                                        </li>
+                                        <li>
+                                            <select ng-model="listen_repeat.time">
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            </select>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
