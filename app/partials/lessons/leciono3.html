@@ -1,1 +1,26 @@
-<div class="container"><p>This is the leciono3 <img style="width: 200px" src="img/ikonoj/workInProgress.jpg"/></p></div>
+<div class="row">
+    <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked well" style="max-width: 300px;">
+            <li ng-class="isActive('/leciono3/1')"><a href="#/leciono3/1">{{ 'Lec03.Label5' | translate }}</a></li>
+            <li ng-class="isActive('/leciono3/2')"><a href="#/leciono3/2">{{ 'Lec03.Label6' | translate }}</a></li>
+            <li ng-class="isActive('/leciono3/3')"><a href="#/leciono3/3">{{ 'Lec03.Label11' | translate }}</a></li>
+            <li ng-class="isActive('/leciono3/4')"><a href="#/leciono3/4">{{ 'Lec03.Label7' | translate }}</a></li>
+            <li ng-class="isActive('/leciono3/5')"><a href="#/leciono3/5">{{ 'Lec03.Label9' | translate }}</a></li>
+            <li ng-class="isActive('/leciono3/6')"><a href="#/leciono3/6">{{ 'Gheneralaj.TFrame2.PP_Label1' | translate }}</a></li>
+            <li ng-class="isActive('/leciono3/7')"><a href="#/leciono3/7">{{ 'Lec03.Label183' | translate }}</a></li>
+            <li ng-class="isActive('/leciono3/8')"><a href="#/leciono3/8">{{ 'Gheneralaj.TFrame4.Label83' | translate }}</a></li>
+            <li ng-class="isActive('/leciono3/9')"><a href="#/leciono3/9">{{ 'Lec03.Label10' | translate }}</a></li>
+        </ul>
+    </div>
+    <div class="col-md-9">
+        <leciono3p1 ng-show="isActive('/leciono3/1')"></leciono3p1>
+        <leciono3p2 ng-show="isActive('/leciono3/2')"></leciono3p2>
+        <leciono3p3 ng-show="isActive('/leciono3/3')"></leciono3p3>
+        <leciono3p4 ng-show="isActive('/leciono3/4')"></leciono3p4>
+        <leciono3p5 ng-show="isActive('/leciono3/5')"></leciono3p5>
+        <leciono3p6 ng-show="isActive('/leciono3/6')"></leciono3p6>
+        <leciono3p7 ng-show="isActive('/leciono3/7')"></leciono3p7>
+        <leciono3p8 ng-show="isActive('/leciono3/8')"></leciono3p8>
+        <leciono3p9 ng-show="isActive('/leciono3/9')"></leciono3p9>
+    </div>
+</div>

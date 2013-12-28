@@ -14,12 +14,6 @@ angular.module("leciono1Controller", ["i18n", "services"])
         $scope.listenAndWrite=listenAndWrite;
         listenAndWrite.loadList();
 
-        $scope.changeLang = function () {
-            locale.lang = "franca";
-            $route.reload();
-        }
-
-
 
         /**
          * Test if the route is active

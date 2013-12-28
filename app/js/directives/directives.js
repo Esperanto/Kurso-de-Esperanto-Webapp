@@ -282,3 +282,113 @@ angular.module('directives', [])
             replace: true
         }
     })
+
+//***********************leciono3*************************//
+    .directive("leciono3p1",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/lessons/leciono3/p1.html',
+            replace: true
+        }
+    })
+    .directive("leciono3p2",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/lessons/leciono3/p2.html',
+            replace: true
+        }
+    })
+    .directive("leciono3p3",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/lessons/leciono3/p3.html',
+            replace: true
+        }
+    })
+    .directive("leciono3p4",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/lessons/leciono3/p4.html',
+            replace: true
+        }
+    })
+    .directive("leciono3p5",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/lessons/leciono3/p5.html',
+            replace: true
+        }
+    })
+    .directive("leciono3p6",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/lessons/leciono3/p6.html',
+            replace: true
+        }
+    })
+    .directive("leciono3p7",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/lessons/leciono3/p7.html',
+            replace: true
+        }
+    })
+    .directive("leciono3p8",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/lessons/leciono3/p8.html',
+            replace: true
+        }
+    })
+    .directive("leciono3p9",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/lessons/leciono3/p9.html',
+            replace: true
+        }
+    })
