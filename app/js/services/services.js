@@ -78,11 +78,13 @@ angular.module('services', []).factory('locale',function () {
             playedWord: "",
             // is the game On or Off
             on: false,
-            leciono:"01",
+            leciono:"00",
             // load the entire list from the resources
             loadList: function (leciono,part) {
-                obj.leciono=leciono
-                if (!obj.entireList.length) {
+                if (leciono!=obj.leciono) {
+                    obj.on=false;
+                    obj.entireList=[];
+                    obj.leciono=leciono;
                     resources.load("ekz"+leciono).success(function (data) {
                         angular.forEach(eval(data)[part], function (value) {
                             obj.entireList.push(value);
@@ -206,11 +208,13 @@ angular.module('services', []).factory('locale',function () {
             wrong: false,
             textArea: "",
             input: "",
-            leciono:"01",
+            leciono:"00",
             // load the entire list from the resources
             loadList: function (leciono,part) {
-                obj.leciono=leciono;
-                if (!obj.entireList.length) {
+                if (leciono!=obj.leciono) {
+                    obj.on=false;
+                    obj.entireList=[];
+                    obj.leciono=leciono;
                     resources.load("ekz"+obj.leciono).success(function (data) {
                         angular.forEach(eval(data)[part], function (value) {
                             obj.entireList.push(value);
@@ -309,11 +313,13 @@ angular.module('services', []).factory('locale',function () {
             count: 2,
             countToPlay: 2,
             time:2,
-            leciono:"01",
+            leciono:"00",
             // load the entire list from the resources
             loadList: function (leciono,part) {
-                obj.leciono=leciono;
-                if (!obj.entireList.length) {
+                if (leciono!=obj.leciono) {
+                    obj.on=false;
+                    obj.entireList=[];
+                    obj.leciono=leciono;
                     resources.load("ekz"+leciono).success(function (data) {
                         angular.forEach(eval(data)[part], function (value) {
                             obj.entireList.push(value);

@@ -5,7 +5,7 @@
  * controller of the lesson 1
  */
 angular.module("leciono2Controller", ["i18n","services"])
-    .controller("leciono2Controller", function ($scope,$location,$route,i18n,locale,listen_repeat,listen_write) {
+    .controller("leciono2Controller", function ($scope,$location,$route,i18n,listen_repeat,listen_write) {
         i18n.set();
         $scope.listen_repeat=listen_repeat;
         listen_repeat.loadList("02","0201D");
