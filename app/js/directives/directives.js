@@ -41,6 +41,18 @@ angular.module('directives', [])
             replace: true
         }
     })
+    .directive("writeNumber",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/exercises/write_number.html',
+            replace: true
+        }
+    })
 
 //********************leciono1******************************//
     .directive("leciono1p1",function () {

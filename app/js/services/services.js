@@ -387,4 +387,97 @@ angular.module('services', []).factory('locale',function () {
             }
         };
         return obj;
-    });
+    })
+
+
+.factory('write_number', function (resources, utils, $timeout) {
+    var obj = {
+        // the entire list of items loaded from the resources
+        entireList: [],
+        entireNumberList:[],
+        // the list that contains the remain items to display
+        remainList: [],
+        // string that contains the word played
+        number: "",
+        // is the game On or Off
+        on: false,
+        wrongClicks:0,
+        leciono:"00",
+        // load the entire list from the resources
+        loadList: function (leciono,part1,part2) {
+            if (leciono!=obj.leciono) {
+                obj.on=false;
+                obj.entireList=[];
+                obj.entireNumberList=[];
+                obj.leciono=leciono;
+                resources.load("ekz"+leciono).success(function (data) {
+                    angular.forEach(eval(data)[part1], function (value) {
+                        obj.entireList.push(value);
+                    });
+                    obj.remainList = angular.copy(obj.entireList);
+                });
+                resources.load("ekz"+leciono).success(function (data) {
+                    angular.forEach(eval(data)[part2], function (value) {
+                        obj.entireNumberList.push(value);
+                    });
+                });
+            }
+        },
+        // turn On the game
+        turnOn: function () {
+            obj.on = true;
+            obj.displayNumber();
+        },
+        // turn Off the game
+        turnOff: function () {
+            obj.on = false;
+            obj.wrongClicks = 0;
+            obj.remainList = angular.copy(obj.entireList);
+        },
+        // play a random sound
+        displayNumber: function () {
+            var index = Math.floor((Math.random() * obj.remainList.length));
+            obj.number = obj.remainList[index];
+        },
+        submit: function (value) {
+            if (obj.on && value != "") {
+                var index = obj.entireList.indexOf(obj.number);
+                var number= obj.entireNumberList[index];
+                console.log(number,value)
+                if (number == value) {
+                    obj.input = "";
+                    var index = obj.remainList.indexOf(obj.number);
+                    obj.remainList.splice(index, 1);
+                    obj.playCorrectSound();
+                }
+                else {
+                    obj.wrongClicks++;
+                    obj.playWrongSound();
+                    obj.wrong = true;
+                    $timeout(function () {
+                        obj.wrong = false;
+                        obj.input = "";
+                    }, 1500);
+                }
+                $timeout(function () {
+                    obj.displayNumber();
+                }, 1000)
+            }
+        },playWrongSound: function () {
+            var sound = soundManager.createSound({
+                url: 'sounds/ne3.ogg'
+            });
+            sound.play();
+        },playCorrectSound: function () {
+            var sound = soundManager.createSound({
+                url: 'sounds/korekte3.ogg'
+            });
+            sound.play();
+        },
+        rightClicks: function () {
+            return obj.entireList.length - (obj.remainList.length);
+        }
+    };
+    return obj;
+});
+
