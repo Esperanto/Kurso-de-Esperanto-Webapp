@@ -1,4 +1,4 @@
-Kurso de Esperanto webapp
+Kurso de Esperanto Webapp
 ================
 
 Kurso de Esperanto webapp is a  web application built from the resources of the free desktop application [Kurso de Esperanto 4](http://www.kurso.com.br/index.php?en)
