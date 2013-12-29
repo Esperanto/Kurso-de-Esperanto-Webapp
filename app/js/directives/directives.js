@@ -443,3 +443,138 @@ angular.module('directives', [])
             replace: true
         }
     })
+
+
+//*********************Leciono4*****************************//
+    .directive("leciono4p1",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/lessons/leciono4/p1.html',
+            replace: true
+        }
+    })
+    .directive("leciono4p2",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/lessons/leciono4/p2.html',
+            replace: true
+        }
+    })
+    .directive("leciono4p3",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/lessons/leciono4/p3.html',
+            replace: true
+        }
+    })
+    .directive("leciono4p4",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/lessons/leciono4/p4.html',
+            replace: true
+        }
+    })
+    .directive("leciono4p5",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/lessons/leciono4/p5.html',
+            replace: true
+        }
+    })
+    .directive("leciono4p6",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/lessons/leciono4/p6.html',
+            replace: true
+        }
+    })
+    .directive("leciono4p7",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/lessons/leciono4/p7.html',
+            replace: true
+        }
+    })
+    .directive("leciono4p8",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/lessons/leciono4/p8.html',
+            replace: true
+        }
+    })
+    .directive("leciono4p9",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/lessons/leciono4/p9.html',
+            replace: true
+        }
+    })
+    .directive("leciono4p10",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/lessons/leciono4/p10.html',
+            replace: true
+        }
+    })
+    .directive("leciono4p11",function () {
+        return {
+            link: function (scope, element, attrs) {
+                soundManager.onready(function() {
+                    inlinePlayer.init();
+                });
+            },
+            restrict: 'AE',
+            templateUrl: 'partials/lessons/leciono4/p11.html',
+            replace: true
+        }
+    })
