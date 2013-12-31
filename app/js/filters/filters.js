@@ -1,8 +1,10 @@
 'use strict';
 
 /* Filters */
-
 angular.module('filters', ['i18n']).
+/**
+ * Filter to translate
+ */
     filter('translate', function (i18n){
         return function(input){
             var lang=i18n.lang();

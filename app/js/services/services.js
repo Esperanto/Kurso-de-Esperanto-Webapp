@@ -2,14 +2,20 @@
 
 /* services */
 
+angular.module('services', [])
+/**
+ * Locale
+ */
+    .factory('locale', function () {
+        return {
+            lang: "angla"
+        }
+    })
 
-// Demonstrate how to register services
-// In this case it is a simple value service.
-angular.module('services', []).factory('locale',function () {
-    return {
-        lang: "angla"
-    }
-}).factory('resources',function ($http) {
+/**
+ * Factory to load resources
+ */
+    .factory('resources',function ($http) {
 
         function Chain() {
             var _this = this;
@@ -42,7 +48,11 @@ angular.module('services', []).factory('locale',function () {
                 return chain.r;
             }
         }
-    }).factory('utils',function ($http) {
+    })
+/**
+ * Utils Factory
+ */
+    .factory('utils',function ($http) {
         return {
             replaceSpecialChars: function (value) {
                 value = value.replace("ĉ", "cx");
@@ -55,10 +65,11 @@ angular.module('services', []).factory('locale',function () {
                 return value;
             }
         }
-    }).factory('listen_click', function (resources, utils, $timeout, $filter) {
-        /**
-         * code that manage the game of  Leciono1 part 2
-         */
+    })
+/**
+ * Listen and click exercise
+ */
+    .factory('listen_click', function (resources, utils, $timeout, $filter) {
         var obj = {
             // the random list to display to the user
             randomList: [
@@ -78,22 +89,27 @@ angular.module('services', []).factory('locale',function () {
             playedWord: "",
             // is the game On or Off
             on: false,
-            leciono:"00",
+            //leciono from where to load the resource
+            leciono: "00",
             // load the entire list from the resources
-            loadList: function (leciono,part) {
-                if (leciono!=obj.leciono) {
-                    obj.on=false;
-                    obj.entireList=[];
-                    obj.leciono=leciono;
-                    resources.load("ekz"+leciono).success(function (data) {
+            loadList: function (leciono, part) {
+                if (leciono != obj.leciono) {
+                    obj.on = false;
+                    obj.entireList = [];
+                    obj.leciono = leciono;
+                    resources.load("ekz" + leciono).success(function (data) {
                         angular.forEach(eval(data)[part], function (value) {
                             obj.entireList.push(value);
                         });
+                        // fill remainList with the entire list
                         obj.remainList = angular.copy(obj.entireList);
                         obj.generateRandomList();
                     });
                 }
             },
+            /**
+             * Generate a random list from the remainList
+             */
             generateRandomList: function () {
                 obj.randomList = [
                     [],
@@ -101,11 +117,13 @@ angular.module('services', []).factory('locale',function () {
                     []
                 ];
                 obj.unclickedList = [];
+                // end of the game if remainList.length < 6
                 if (obj.remainList.length < 6) {
                     obj.on = false;
                     obj.remainList = angular.copy(obj.entireList);
-                    $('#result').modal()
+                    $('#result').modal() // show modal
                 }
+                //Fill the randomList with 6 elements picked from the remainList randomly
                 for (var i = 0; i < 6; i++) {
                     var index = Math.floor((Math.random() * (obj.remainList.length)));
                     obj.randomList[Math.floor(i / 2)].push(obj.remainList[index]);
@@ -114,17 +132,25 @@ angular.module('services', []).factory('locale',function () {
                 }
 
             },
+            /**
+             * click on one of the 6 random words displayed
+             * @param value
+             */
             clickBtn: function (value) {
+                // success
                 if (obj.playedWord == value) {
                     var index = obj.unclickedList.indexOf(value);
                     obj.unclickedList.splice(index, 1);
+                    //when their is only 2 unclicked words displayed
                     if (obj.unclickedList.length == 2) {
                         obj.remainList = obj.remainList.concat(obj.unclickedList);
-                        obj.generateRandomList();
+                        obj.generateRandomList(); // generate a new random list
                     }
                     if (obj.on)
                         obj.playSound();
-                } else {
+                }
+                // fail
+                else {
                     obj.wrongClicks++;
                     var activeBtnFn = obj.activeBtn;
                     obj.activeBtn = function (val) {
@@ -140,6 +166,7 @@ angular.module('services', []).factory('locale',function () {
                 }
                 console.log(value, obj.unclickedList)
             },
+            // return css class for the 6 words displayed
             activeBtn: function (value) {
                 if (obj.unclickedList.indexOf(value) == -1)
                     return "disabled";
@@ -154,7 +181,7 @@ angular.module('services', []).factory('locale',function () {
             turnOff: function () {
                 obj.on = false;
                 obj.wrongClicks = 0;
-                obj.remainList = angular.copy(obj.entireList);
+                obj.remainList = angular.copy(obj.entireList); // copy
                 obj.generateRandomList();
             },
             // play a random sound from the unclicked buttons displayed
@@ -164,36 +191,37 @@ angular.module('services', []).factory('locale',function () {
                 var soundToPlay = obj.unclickedList[index];
                 obj.playedWord = soundToPlay;
                 var sound = soundManager.createSound({
-                    url: 'sounds/lec'+obj.leciono+'/' + utils.replaceSpecialChars(soundToPlay) + '.ogg'
+                    url: 'sounds/lec' + obj.leciono + '/' + utils.replaceSpecialChars(soundToPlay) + '.ogg'
                 });
-                sound.play();
+                sound.play(); // play
                 obj.playedSound = sound;
             },
             // replay the last sound played
             replaySound: function () {
                 obj.playedSound.play();
             },
+            // sound played in case of a mistake
             playWrongSound: function () {
                 var sound = soundManager.createSound({
                     url: 'sounds/ne3.ogg'
                 });
                 sound.play();
             },
+            // number of right clicks
             rightClicks: function () {
                 return obj.entireList.length - (obj.remainList.length + obj.unclickedList.length);
             },
-            wrongClicks: 0,
+            wrongClicks: 0, // number of wrong clicks
+            //Message to display at the end of the game
             message: function () {
                 var win = obj.wrongClicks / obj.entireList.length < 0.3;
                 return (win ? $filter('translate')('Mesagxoj.smGratulon') : $filter('translate')('Mesagxoj.smDenove'))
             }
-
         }
-
         return obj;
     })
-
-    .factory('listen_write',function (resources, utils, $timeout) {
+// listen and write exercise
+    .factory('listen_write', function (resources, utils, $timeout) {
         var obj = {
             // the entire list of items loaded from the resources
             entireList: [],
@@ -205,22 +233,25 @@ angular.module('services', []).factory('locale',function () {
             playedWord: "",
             // is the game On or Off
             on: false,
+            // set to true when their is a wrong answer
             wrong: false,
+            //value of the textArea in the exercise
             textArea: "",
+            // value of the input
             input: "",
-            leciono:"00",
+            //leciono from where to load the resource
+            leciono: "00",
             // load the entire list from the resources
-            loadList: function (leciono,part) {
-                if (leciono!=obj.leciono) {
-                    obj.on=false;
-                    obj.entireList=[];
-                    obj.leciono=leciono;
-                    resources.load("ekz"+obj.leciono).success(function (data) {
+            loadList: function (leciono, part) {
+                if (leciono != obj.leciono) {
+                    obj.on = false;
+                    obj.entireList = [];
+                    obj.leciono = leciono;
+                    resources.load("ekz" + obj.leciono).success(function (data) {
                         angular.forEach(eval(data)[part], function (value) {
                             obj.entireList.push(value);
                         });
                         obj.remainList = angular.copy(obj.entireList);
-
                     });
                 }
             },
@@ -242,9 +273,9 @@ angular.module('services', []).factory('locale',function () {
                 var soundToPlay = obj.remainList[index];
                 obj.playedWord = soundToPlay;
                 var sound = soundManager.createSound({
-                    url: 'sounds/lec'+obj.leciono+'/' + utils.replaceSpecialChars(soundToPlay) + '.ogg'
+                    url: 'sounds/lec' + obj.leciono + '/' + utils.replaceSpecialChars(soundToPlay) + '.ogg'
                 });
-                sound.play();
+                sound.play(); // play
                 obj.playedSound = sound;
             },
             // replay the last sound played
@@ -253,49 +284,54 @@ angular.module('services', []).factory('locale',function () {
                     obj.playedSound.play();
                 }
             },
+            // sound played in case of a mistake
             playWrongSound: function () {
                 var sound = soundManager.createSound({
                     url: 'sounds/ne3.ogg'
                 });
                 sound.play();
             },
+            // click of the submit button
             submit: function (value) {
                 if (obj.on && value != "") {
                     var wordToWrite = utils.replaceSpecialChars(obj.playedWord);
                     if (wordToWrite == value) {
-                        obj.textArea += value + "\n";
-                        obj.input = "";
+                        obj.textArea += value + "\n"; // add the value to the text area
+                        obj.input = ""; // empty input
                         var index = obj.remainList.indexOf(obj.playedWord);
-                        obj.remainList.splice(index, 1);
+                        obj.remainList.splice(index, 1); // remove the word from the remainList
                     }
                     else {
-                            obj.wrongClicks++;
-                            obj.playWrongSound();
-                            obj.wrong = true;
-                            $timeout(function () {
-                                obj.wrong = false;
-                                obj.input = "";
-                            }, 1500);
+                        obj.wrongClicks++;
+                        obj.playWrongSound();
+                        obj.wrong = true;
+                        // set to right mode after 1.5 seconds
+                        $timeout(function () {
+                            obj.wrong = false;
+                            obj.input = "";
+                        }, 1500);
                     }
-                    setTimeout(function () {
+                    // play new sound after 1 second
+                    $timeout(function () {
                         obj.playSound();
                     }, 1000)
                     console.log(value);
                 }
             },
+            // number of right clicks
             rightClicks: function () {
                 return obj.entireList.length - (obj.remainList.length);
             },
-            wrongClicks: 0,
+            wrongClicks: 0, // number of wrong clicks
+            //Message to display at the end of the game
             message: function () {
                 var win = obj.wrongClicks / obj.entireList.length < 0.3;
                 return (win ? $filter('translate')('Mesagxoj.smGratulon') : $filter('translate')('Mesagxoj.smDenove'))
             }
-
         }
         return obj;
     })
-
+// Listen and repeat exercise
     .factory('listen_repeat', function (resources, utils, $timeout) {
         var obj = {
             // the entire list of items loaded from the resources
@@ -308,24 +344,29 @@ angular.module('services', []).factory('locale',function () {
             playedWord: "",
             // is the game On or Off
             on: false,
+            // is the sound playing
             isPlaying: false,
+            // the value of the progress bar
             progress: 0,
+            // number sounds chosen to play
             count: 2,
+            // number of sounds left to play
             countToPlay: 2,
-            time:2,
-            leciono:"00",
+            // time let to repeat the word
+            time: 2,
+            //leciono from where to load the resource
+            leciono: "00",
             // load the entire list from the resources
-            loadList: function (leciono,part) {
-                if (leciono!=obj.leciono) {
-                    obj.on=false;
-                    obj.entireList=[];
-                    obj.leciono=leciono;
-                    resources.load("ekz"+leciono).success(function (data) {
+            loadList: function (leciono, part) {
+                if (leciono != obj.leciono) {
+                    obj.on = false;
+                    obj.entireList = [];
+                    obj.leciono = leciono;
+                    resources.load("ekz" + leciono).success(function (data) {
                         angular.forEach(eval(data)[part], function (value) {
                             obj.entireList.push(value);
                         });
                         obj.remainList = angular.copy(obj.entireList);
-
                     });
                 }
             },
@@ -345,139 +386,152 @@ angular.module('services', []).factory('locale',function () {
                 console.log("Play Sound!")
                 var index = Math.floor((Math.random() * obj.remainList.length));
                 var soundToPlay = obj.remainList[index];
-                obj.remainList.splice(index,1);
+                obj.remainList.splice(index, 1);
                 obj.playedWord = soundToPlay;
                 var sound = soundManager.createSound({
-                    url: 'sounds/lec'+obj.leciono+'/' + utils.replaceSpecialChars(soundToPlay) + '.ogg'
+                    url: 'sounds/lec' + obj.leciono + '/' + utils.replaceSpecialChars(soundToPlay) + '.ogg'
                 });
                 sound.play();
                 obj.playing();
                 obj.playedSound = sound;
-            }, replaySound: function () {
+            },
+            // replay the sound
+            replaySound: function () {
                 if (obj.on) {
                     obj.playedSound.play();
                     obj.playing();
                 }
             },
+            // playing sounds
             playing: function () {
                 obj.isPlaying = true;
                 obj.progress = 0;
                 $timeout(function () {
                     obj.isPlaying = false;
-                    for (var i = 1; i <= 2*obj.time; i++) {
+                    for (var i = 1; i <= 2 * obj.time; i++) {
                         (function (i) {
                             $timeout(function () {
-                                console.log(i);
-                                obj.progress = i * 100 / (2*obj.time);
-                                if (i==2*obj.time && obj.countToPlay > 0)
+                                obj.progress = i * 100 / (2 * obj.time);
+                                if (i == 2 * obj.time && obj.countToPlay > 0)
                                     obj.countToPlay--;
                             }, i * 500);
                         })(i);
                     }
                 }, 2000);
             },
+            // play next sounds
             nextSounds: function () {
                 obj.countToPlay = obj.count;
                 obj.playSound();
                 for (var i = 0; i < obj.count - 1; i++) {
                     $timeout(function () {
                         obj.playSound();
-                    }, (i + 1) * obj.time*2000);
+                    }, (i + 1) * obj.time * 2000);
                 }
             }
         };
         return obj;
     })
-
-
-.factory('write_number', function (resources, utils, $timeout) {
-    var obj = {
-        // the entire list of items loaded from the resources
-        entireList: [],
-        entireNumberList:[],
-        // the list that contains the remain items to display
-        remainList: [],
-        // string that contains the word played
-        number: "",
-        // is the game On or Off
-        on: false,
-        wrongClicks:0,
-        leciono:"00",
-        // load the entire list from the resources
-        loadList: function (leciono,part1,part2) {
-            if (leciono!=obj.leciono) {
-                obj.on=false;
-                obj.entireList=[];
-                obj.entireNumberList=[];
-                obj.leciono=leciono;
-                resources.load("ekz"+leciono).success(function (data) {
-                    angular.forEach(eval(data)[part1], function (value) {
-                        obj.entireList.push(value);
+// write number exercise
+    .factory('write_number', function (resources, utils, $timeout) {
+        var obj = {
+            // the entire list of items loaded from the resources
+            entireList: [],
+            // the entire list of items of numbers loaded from the resources
+            entireNumberList: [],
+            // the list that contains the remain items to display
+            remainList: [],
+            //the number in words
+            sNumber: "",
+            // the number
+            number:0,
+            // is the game On or Off
+            on: false,
+            // wrong clicks
+            wrongClicks: 0,
+            //leciono from where to load the resource
+            leciono: "00",
+            // load the entire list from the resources
+            loadList: function (leciono, part1, part2) {
+                if (leciono != obj.leciono) {
+                    obj.on = false;
+                    obj.entireList = [];
+                    obj.entireNumberList = [];
+                    obj.leciono = leciono;
+                    resources.load("ekz" + leciono).success(function (data) {
+                        angular.forEach(eval(data)[part1], function (value) {
+                            obj.entireList.push(value);
+                        });
+                        obj.remainList = angular.copy(obj.entireList);
                     });
-                    obj.remainList = angular.copy(obj.entireList);
-                });
-                resources.load("ekz"+leciono).success(function (data) {
-                    angular.forEach(eval(data)[part2], function (value) {
-                        obj.entireNumberList.push(value);
+                    resources.load("ekz" + leciono).success(function (data) {
+                        angular.forEach(eval(data)[part2], function (value) {
+                            obj.entireNumberList.push(value);
+                        });
                     });
-                });
-            }
-        },
-        // turn On the game
-        turnOn: function () {
-            obj.on = true;
-            obj.displayNumber();
-        },
-        // turn Off the game
-        turnOff: function () {
-            obj.on = false;
-            obj.wrongClicks = 0;
-            obj.remainList = angular.copy(obj.entireList);
-        },
-        // play a random sound
-        displayNumber: function () {
-            var index = Math.floor((Math.random() * obj.remainList.length));
-            obj.number = obj.remainList[index];
-        },
-        submit: function (value) {
-            if (obj.on && value != "") {
-                var index = obj.entireList.indexOf(obj.number);
-                var number= obj.entireNumberList[index];
-                console.log(number,value)
-                if (number == value) {
-                    obj.input = "";
-                    var index = obj.remainList.indexOf(obj.number);
-                    obj.remainList.splice(index, 1);
-                    obj.playCorrectSound();
                 }
-                else {
-                    obj.wrongClicks++;
-                    obj.playWrongSound();
-                    obj.wrong = true;
-                    $timeout(function () {
-                        obj.wrong = false;
+            },
+            // turn On the game
+            turnOn: function () {
+                obj.on = true;
+                obj.displayNumber();
+            },
+            // turn Off the game
+            turnOff: function () {
+                obj.on = false;
+                obj.wrongClicks = 0;
+                obj.remainList = angular.copy(obj.entireList);
+            },
+            // play a random sound
+            displayNumber: function () {
+                var index = Math.floor((Math.random() * obj.remainList.length));
+                obj.sNumber = obj.remainList[index];
+            },
+            // click on the submit button
+            submit: function (value) {
+                if (obj.on && value != "") {
+                    var index = obj.entireList.indexOf(obj.sNumber);
+                    obj.number = obj.entireNumberList[index];
+                    console.log(obj.number, value)
+                    if (obj.number == value) {
                         obj.input = "";
-                    }, 1500);
+                        var index = obj.remainList.indexOf(obj.sNumber);
+                        obj.remainList.splice(index, 1);
+                        obj.playCorrectSound();
+                    }
+                    else {
+                        obj.wrongClicks++;
+                        obj.playWrongSound();
+                        obj.wrong = true;
+                        $timeout(function () {
+                            obj.wrong = false;
+                            obj.input = "";
+                        }, 1500);
+                    }
+                    $timeout(function () {
+                        obj.displayNumber();
+                    }, 1000)
                 }
-                $timeout(function () {
-                    obj.displayNumber();
-                }, 1000)
+            },
+            // sound played in case of a mistake
+            playWrongSound: function () {
+                var sound = soundManager.createSound({
+                    url: 'sounds/ne3.ogg'
+                });
+                sound.play();
+            },
+            // sound played in case of a good answer
+            playCorrectSound: function () {
+                var sound = soundManager.createSound({
+                    url: 'sounds/korekte3.ogg'
+                });
+                sound.play();
+            },
+            // number of right clicks
+            rightClicks: function () {
+                return obj.entireList.length - (obj.remainList.length);
             }
-        },playWrongSound: function () {
-            var sound = soundManager.createSound({
-                url: 'sounds/ne3.ogg'
-            });
-            sound.play();
-        },playCorrectSound: function () {
-            var sound = soundManager.createSound({
-                url: 'sounds/korekte3.ogg'
-            });
-            sound.play();
-        },
-        rightClicks: function () {
-            return obj.entireList.length - (obj.remainList.length);
-        }
-    };
-    return obj;
-});
+        };
+        return obj;
+    });
 

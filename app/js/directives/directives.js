@@ -1,10 +1,9 @@
 'use strict';
 
 /* Directives */
-
-
 angular.module('directives', [])
-//********************Exercices****************************///
+//********************Exercises****************************///
+    // Listen and click exercise
     .directive("listenClick",function () {
         return {
             link: function (scope, element, attrs) {
@@ -17,6 +16,7 @@ angular.module('directives', [])
             replace: true
         }
     })
+    // Listen and repeat exercise
     .directive("listenRepeat",function () {
         return {
             link: function (scope, element, attrs) {
@@ -29,6 +29,7 @@ angular.module('directives', [])
             replace: true
         }
     })
+    // listen and write exercise
     .directive("listenWrite",function () {
         return {
             link: function (scope, element, attrs) {
@@ -41,6 +42,7 @@ angular.module('directives', [])
             replace: true
         }
     })
+    // write number exercise
     .directive("writeNumber",function () {
         return {
             link: function (scope, element, attrs) {
@@ -54,7 +56,7 @@ angular.module('directives', [])
         }
     })
 
-//********************leciono1******************************//
+//********************Leciono1******************************//
     .directive("leciono1p1",function () {
         return {
             link: function (scope, element, attrs) {
@@ -334,7 +336,7 @@ angular.module('directives', [])
         }
     })
 
-//***********************leciono3*************************//
+//***********************Leciono3*************************//
     .directive("leciono3p1",function () {
         return {
             link: function (scope, element, attrs) {

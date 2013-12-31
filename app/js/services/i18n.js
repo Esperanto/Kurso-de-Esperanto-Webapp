@@ -5,7 +5,6 @@
 /**
  * Module i18n
  */
-
 angular.module('i18n', ["services"])
     .factory('i18n',function($http,$cookies,locale){
 
@@ -25,10 +24,13 @@ angular.module('i18n', ["services"])
         }
 
         var json=undefined;
-        console.log($cookies.locale,"---------------")
         if($cookies.locale)
-            locale.lang=$cookies.locale;
+            locale.lang=$cookies.locale; // get locale from cookies
         return {
+            /**
+             * set language
+             * @returns {{success: Function, error: Function}|*|r}
+             */
             set:function(){
                 var chain = new Chain();
                 $http({
@@ -44,6 +46,9 @@ angular.module('i18n', ["services"])
                     })
                 return chain.r;
             },
+            /**
+             * return the json
+             */
             lang:function(){
                 return json
             }
