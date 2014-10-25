@@ -12,6 +12,7 @@ Kurso de Esperanto webapp is a  web application built from the resources of the 
 
 ## Contribute :
 * Fork and develop new lessons and features based on Kurso de Esperanto desktop app
+* [Help us translate the app](translation/translation-list.md) 
 * Report issues on [Github issues](https://github.com/benahm/Kurso-de-Esperanto-webapp/issues)
 * Contribute to the [Kurso de Esperanto desktop app](http://www.kurso.com.br/index.php?en)
 
