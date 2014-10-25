@@ -1,5 +1,32 @@
-| Translation        |
+| Translations        |
 | ------------- |
 | [angla-araba.md](angla-araba.md)     |
-| col 2 is      |
-| zebra stripes |
+| [angla-bulgara.md](angla-bulgara.md)     |
+| [angla-ceha.md](angla-ceha.md)     |
+| [angla-dana.md](angla-dana.md)     |
+| [angla-finna.md](angla-finna.md)     |
+| [angla-franca.md](angla-franca.md)     |
+| [angla-germana.md](angla-germana.md)     |
+| [angla-greka.md](angla-greka.md)     |
+| [angla-hispana.md](angla-hispana.md)     |
+| [angla-hungara.md](angla-hungara.md)     |
+| [angla-indonezia.md](angla-indonezia.md)     |
+| [angla-islanda.md](angla-islanda.md)     |
+| [angla-itala.md](angla-itala.md)     |
+| [angla-japana.md](angla-japana.md)     |
+| [angla-kataluna.md](angla-kataluna.md)     |
+| [angla-korea.md](angla-korea.md)     |
+| [angla-kroata.md](angla-kroata.md)     |
+| [angla-latva.md](angla-latva.md)     |
+| [angla-litova.md](angla-litova.md)     |
+| [angla-nederlanda.md](angla-nederlanda.md)     |
+| [angla-pola.md](angla-pola.md)     |
+| [angla-portugala.md](angla-portugala.md)     |
+| [angla-rusa.md](angla-rusa.md)     |
+| [angla-rusa2.md](angla-rusa2.md)     |
+| [angla-serba.md](angla-serba.md)     |
+| [angla-slovaka.md](angla-slovaka.md)     |
+| [angla-slovena.md](angla-slovena.md)     |
+| [angla-sveda.md](angla-sveda.md)     |
+| [angla-turka.md](angla-turka.md)     |
+| [angla-vjetnama.md](angla-vjetnama.md)     |
