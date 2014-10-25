@@ -1,32 +1,32 @@
 | Translations        |
 | ------------- |
-| [angla-araba.md](angla-araba.md)     |
-| [angla-bulgara.md](angla-bulgara.md)     |
-| [angla-ceha.md](angla-ceha.md)     |
-| [angla-dana.md](angla-dana.md)     |
-| [angla-finna.md](angla-finna.md)     |
-| [angla-franca.md](angla-franca.md)     |
-| [angla-germana.md](angla-germana.md)     |
-| [angla-greka.md](angla-greka.md)     |
-| [angla-hispana.md](angla-hispana.md)     |
-| [angla-hungara.md](angla-hungara.md)     |
-| [angla-indonezia.md](angla-indonezia.md)     |
-| [angla-islanda.md](angla-islanda.md)     |
-| [angla-itala.md](angla-itala.md)     |
-| [angla-japana.md](angla-japana.md)     |
-| [angla-kataluna.md](angla-kataluna.md)     |
-| [angla-korea.md](angla-korea.md)     |
-| [angla-kroata.md](angla-kroata.md)     |
-| [angla-latva.md](angla-latva.md)     |
-| [angla-litova.md](angla-litova.md)     |
-| [angla-nederlanda.md](angla-nederlanda.md)     |
-| [angla-pola.md](angla-pola.md)     |
-| [angla-portugala.md](angla-portugala.md)     |
-| [angla-rusa.md](angla-rusa.md)     |
-| [angla-rusa2.md](angla-rusa2.md)     |
-| [angla-serba.md](angla-serba.md)     |
-| [angla-slovaka.md](angla-slovaka.md)     |
-| [angla-slovena.md](angla-slovena.md)     |
-| [angla-sveda.md](angla-sveda.md)     |
-| [angla-turka.md](angla-turka.md)     |
-| [angla-vjetnama.md](angla-vjetnama.md)     |
+| [angla -> araba](angla-araba.md)     |
+| [angla -> bulgara](angla-bulgara.md)     |
+| [angla -> ceha](angla-ceha.md)     |
+| [angla -> dana](angla-dana.md)     |
+| [angla -> finna](angla-finna.md)     |
+| [angla -> franca](angla-franca.md)     |
+| [angla -> germana](angla-germana.md)     |
+| [angla -> greka](angla-greka.md)     |
+| [angla -> hispana](angla-hispana.md)     |
+| [angla -> hungara](angla-hungara.md)     |
+| [angla -> indonezia](angla-indonezia.md)     |
+| [angla -> islanda](angla-islanda.md)     |
+| [angla -> itala](angla-itala.md)     |
+| [angla -> japana](angla-japana.md)     |
+| [angla -> kataluna](angla-kataluna.md)     |
+| [angla -> korea](angla-korea.md)     |
+| [angla -> kroata](angla-kroata.md)     |
+| [angla -> latva](angla-latva.md)     |
+| [angla -> litova](angla-litova.md)     |
+| [angla -> nederlanda](angla-nederlanda.md)     |
+| [angla -> pola](angla-pola.md)     |
+| [angla -> portugala](angla-portugala.md)     |
+| [angla -> rusa](angla-rusa.md)     |
+| [angla -> rusa2](angla-rusa2.md)     |
+| [angla -> serba](angla-serba.md)     |
+| [angla -> slovaka](angla-slovaka.md)     |
+| [angla -> slovena](angla-slovena.md)     |
+| [angla -> sveda](angla-sveda.md)     |
+| [angla -> turka](angla-turka.md)     |
+| [angla -> vjetnama](angla-vjetnama.md)     |
