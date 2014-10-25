@@ -44,23 +44,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lang.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lang.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/lang/lang.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.80091184" vertical-offset="0" max-vertical-offset="680">
-              <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+            <state vertical-scroll-proportion="-8.307693" vertical-offset="22" max-vertical-offset="680">
+              <caret line="14" column="31" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="angla-latva.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/translation/angla-latva.md">
+      <file leaf-file-name="translation-list.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/translation/translation-list.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="654">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
           </provider>
         </entry>
       </file>
@@ -243,14 +246,14 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -368,14 +371,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/translation/angla-latva.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/translation/angla-araba.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.96723866" vertical-offset="1709" max-vertical-offset="2431">
@@ -387,7 +382,18 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/translation/angal-bulgara.md">
+    <entry file="file://$PROJECT_DIR$/translation/angla-ceha.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96723866" vertical-offset="23724" max-vertical-offset="24446">
+          <caret line="1432" column="60" selection-start-line="1432" selection-start-column="60" selection-end-line="1432" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-bulgara.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.96723866" vertical-offset="32411" max-vertical-offset="33133">
           <caret line="1943" column="194" selection-start-line="1943" selection-start-column="194" selection-end-line="1943" selection-end-column="194" />
@@ -398,12 +404,314 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lang/lang.html">
+    <entry file="file://$PROJECT_DIR$/translation/angla-dana.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80091184" vertical-offset="0" max-vertical-offset="680">
-          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.96723866" vertical-offset="32411" max-vertical-offset="33133">
+          <caret line="1943" column="361" selection-start-line="1943" selection-start-column="361" selection-end-line="1943" selection-end-column="361" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-finna.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9469579" vertical-offset="32424" max-vertical-offset="33133">
+          <caret line="1943" column="341" selection-start-line="1943" selection-start-column="341" selection-end-line="1943" selection-end-column="341" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lang/finna.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="37689">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-germana.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96723866" vertical-offset="32411" max-vertical-offset="33133">
+          <caret line="1943" column="251" selection-start-line="1943" selection-start-column="251" selection-end-line="1943" selection-end-column="251" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-greka.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96723866" vertical-offset="32411" max-vertical-offset="33133">
+          <caret line="1943" column="332" selection-start-line="1943" selection-start-column="332" selection-end-line="1943" selection-end-column="332" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-hispana.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96723866" vertical-offset="32411" max-vertical-offset="33133">
+          <caret line="1943" column="378" selection-start-line="1943" selection-start-column="378" selection-end-line="1943" selection-end-column="378" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-hungara.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9469579" vertical-offset="32424" max-vertical-offset="33133">
+          <caret line="1943" column="350" selection-start-line="1943" selection-start-column="350" selection-end-line="1943" selection-end-column="350" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-indonezia.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96723866" vertical-offset="23333" max-vertical-offset="24055">
+          <caret line="1409" column="64" selection-start-line="1409" selection-start-column="64" selection-end-line="1409" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-islanda.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96723866" vertical-offset="32411" max-vertical-offset="33133">
+          <caret line="1943" column="194" selection-start-line="1943" selection-start-column="194" selection-end-line="1943" selection-end-column="194" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-itala.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96723866" vertical-offset="32411" max-vertical-offset="33133">
+          <caret line="1943" column="363" selection-start-line="1943" selection-start-column="363" selection-end-line="1943" selection-end-column="363" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-japana.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96723866" vertical-offset="32411" max-vertical-offset="33133">
+          <caret line="1943" column="194" selection-start-line="1943" selection-start-column="194" selection-end-line="1943" selection-end-column="194" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-kataluna.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96723866" vertical-offset="32411" max-vertical-offset="33133">
+          <caret line="1943" column="194" selection-start-line="1943" selection-start-column="194" selection-end-line="1943" selection-end-column="194" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-korea.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96723866" vertical-offset="32411" max-vertical-offset="33133">
+          <caret line="1943" column="194" selection-start-line="1943" selection-start-column="194" selection-end-line="1943" selection-end-column="194" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-kroata.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96723866" vertical-offset="32411" max-vertical-offset="33133">
+          <caret line="1943" column="304" selection-start-line="1943" selection-start-column="304" selection-end-line="1943" selection-end-column="304" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-latva.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96870345" vertical-offset="32381" max-vertical-offset="33133">
+          <caret line="1943" column="329" selection-start-line="1943" selection-start-column="329" selection-end-line="1943" selection-end-column="329" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-litova.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96723866" vertical-offset="32411" max-vertical-offset="33133">
+          <caret line="1943" column="317" selection-start-line="1943" selection-start-column="317" selection-end-line="1943" selection-end-column="317" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-nederlanda.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96723866" vertical-offset="32411" max-vertical-offset="33133">
+          <caret line="1943" column="194" selection-start-line="1943" selection-start-column="194" selection-end-line="1943" selection-end-column="194" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-pola.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96723866" vertical-offset="14459" max-vertical-offset="15181">
+          <caret line="887" column="462" selection-start-line="887" selection-start-column="462" selection-end-line="887" selection-end-column="462" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-portugala.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96723866" vertical-offset="22891" max-vertical-offset="23613">
+          <caret line="1383" column="624" selection-start-line="1383" selection-start-column="624" selection-end-line="1383" selection-end-column="624" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-rusa.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96723866" vertical-offset="23333" max-vertical-offset="24055">
+          <caret line="1409" column="45" selection-start-line="1409" selection-start-column="45" selection-end-line="1409" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-rusa2.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96723866" vertical-offset="32411" max-vertical-offset="33133">
+          <caret line="1943" column="336" selection-start-line="1943" selection-start-column="336" selection-end-line="1943" selection-end-column="336" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-serba.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3650546" vertical-offset="32156" max-vertical-offset="33133">
+          <caret line="1943" column="194" selection-start-line="1943" selection-start-column="194" selection-end-line="1943" selection-end-column="194" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-slovaka.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96723866" vertical-offset="23333" max-vertical-offset="24055">
+          <caret line="1409" column="36" selection-start-line="1409" selection-start-column="36" selection-end-line="1409" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-slovena.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96723866" vertical-offset="7608" max-vertical-offset="8330">
+          <caret line="484" column="91" selection-start-line="484" selection-start-column="91" selection-end-line="484" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-sveda.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96723866" vertical-offset="32411" max-vertical-offset="33133">
+          <caret line="1943" column="194" selection-start-line="1943" selection-start-column="194" selection-end-line="1943" selection-end-column="194" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-turka.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96723866" vertical-offset="23333" max-vertical-offset="24055">
+          <caret line="1409" column="37" selection-start-line="1409" selection-start-column="37" selection-end-line="1409" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/angla-vjetnama.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4102964" vertical-offset="32411" max-vertical-offset="33133">
+          <caret line="1922" column="129" selection-start-line="1922" selection-start-column="129" selection-end-line="1922" selection-end-column="129" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lang/lang.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.307693" vertical-offset="22" max-vertical-offset="680">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translation/translation-list.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="654">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
   </component>

@@ -12,7 +12,7 @@
     // a JavaScript to generate translation files in md format
     $(document).ready(function () {
         $.getJSON("angla.json", function(anglaJSON) { // load angla.json
-            $.getJSON("bulgara.json", function(otherJSON) { // other lingvo
+            $.getJSON("vjetnama.json", function(otherJSON) { // other lingvo
                 $.each(anglaJSON, function(anglaI1, anglaElement1) {
                     $.each(anglaElement1, function(anglaI2, anglaElement2) {
                         console.log(anglaI1,anglaI2, anglaElement2);
