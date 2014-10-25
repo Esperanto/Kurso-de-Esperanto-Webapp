@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Lang</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="content"></div>
+</body>
+<script>
+    // a JavaScript to generate translation files in md format
+    $(document).ready(function () {
+        $.getJSON("angla.json", function(anglaJSON) { // load angla.json
+            $.getJSON("bulgara.json", function(otherJSON) { // other lingvo
+                $.each(anglaJSON, function(anglaI1, anglaElement1) {
+                    $.each(anglaElement1, function(anglaI2, anglaElement2) {
+                        console.log(anglaI1,anglaI2, anglaElement2);
+                        console.log(anglaI1,anglaI2, otherJSON[anglaI1][anglaI2]);
+                        var otherElement=otherJSON[anglaI1][anglaI2];
+                        var isLingvo=(anglaI1=="Traduko") && (anglaI2=="Lingvo");
+                        if(isLingvo){
+                            $("#content").append("#"+anglaElement2+" => "+otherElement+"<br/>")
+                        }
+                        $("#content").append("|"+anglaElement2+"|"+otherElement+"|<br/>")
+                        if(isLingvo){
+                            $("#content").append("| ------------- | -------------|<br/>")
+                        }
+                    });
+                });
+            });
+        });
+    });
+</script>
+</html>
