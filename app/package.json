@@ -1,9 +1,39 @@
 {
-  "name": "Kurso de Esperanto",
-  "main": "index.html",
-  "window": {
-    "toolbar": false,
-    "width": 1200,
-    "height": 600
-  }
+    "webexe_settings": {
+        "linux-x32": false, 
+        "download_dir": "D:\\Users\\abensaad\\Downloads\\Web2ExeWin\\files\\downloads", 
+        "windows": true, 
+        "mac": false, 
+        "nw_version": "0.10.5", 
+        "force_download": false, 
+        "linux-x64": false
+    }, 
+    "description": "", 
+    "nodejs": true, 
+    "single-instance": true, 
+    "webkit": {
+        "page-cache": true, 
+        "java": true, 
+        "plugin": true
+    }, 
+    "window": {
+        "fullscreen": false, 
+        "resizable": true, 
+        "title": "Kurso de Esperanto", 
+        "always-on-top": false, 
+        "frame": true, 
+        "height": 600, 
+        "visible": true, 
+        "as_desktop": false, 
+        "position": "", 
+        "show_in_taskbar": true, 
+        "width": 1200, 
+        "toolbar": false, 
+        "icon": ""
+    }, 
+    "version": "0.1.0", 
+    "node-main": "", 
+    "keywords": [], 
+    "main": "index.html", 
+    "name": "Kurso de Esperanto"
 }
