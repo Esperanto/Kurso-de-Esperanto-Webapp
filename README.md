@@ -5,10 +5,11 @@ Kurso de Esperanto webapp is a  web application built from the resources of the 
 
 <img align="center" src="https://raw.githubusercontent.com/benahm/Kurso-de-Esperanto-Webapp/master/app/img/screenshot1.png"/>
 ## Roadmap :
-- [ ] Bug fixes
+- [ ] Bug fix
 - [X] Upload tranlation files ([HERE](translation/translation-list.md))
 - [ ] Package the application as desktop app with node-webkit
 
+## Desktop :
 
 ## Contribute :
 * Fork and develop new lessons and features based on Kurso de Esperanto desktop app
