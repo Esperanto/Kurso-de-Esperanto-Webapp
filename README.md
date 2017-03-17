@@ -4,6 +4,7 @@ Kurso de Esperanto Webapp
 Kurso de Esperanto webapp is a  web application built from the resources of the free desktop application [Kurso de Esperanto 4](http://www.kurso.com.br/index.php?en)
 
 <img align="center" src="https://raw.githubusercontent.com/benahm/Kurso-de-Esperanto-Webapp/master/app/img/screenshot1.png"/>
+
 ## Roadmap :
 - [ ] Bug fix
 - [X] Upload translation files ([HERE](translation/translation-list.md))
