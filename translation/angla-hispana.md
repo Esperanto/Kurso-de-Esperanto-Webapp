@@ -269,38 +269,38 @@
 |Translate to Esperanto:|Traduzca al Esperanto:|
 |one|uno|
 |nineteen|diecinueve|
-|water|undefined|
-|to love|undefined|
-|love|undefined|
-|bird|undefined|
-|store|undefined|
-|'to do, to make'|undefined|
-|to forget|undefined|
-|to have|undefined|
-|insect|undefined|
+|water|agua|
+|to love|amar|
+|love|amor|
+|bird|pájaro|
+|store|tienda|
+|'to do, to make'|hacer|
+|to forget|olvidarse|
+|to have|tener|
+|insect|insecto|
 |'to catch, capture'|undefined|
-|to wash|undefined|
-|lemonade|undefined|
-|paper|undefined|
-|to request|undefined|
-|'feather, pen'|undefined|
-|'to carry, to wear'|undefined|
-|'clean, pure'|undefined|
-|'to meet, encounter'|undefined|
-|to write|undefined|
-|to add sugar|undefined|
-|cup|undefined|
-|to drink|undefined|
-|to find|undefined|
-|to sell|undefined|
-|to see|undefined|
-|Vocabu ary|undefined|
+|to wash|lavar|
+|lemonade|limonada|
+|paper|papel|
+|to request|solicitar|
+|'feather, pen'|'pluma'|
+|'to carry, to wear'|'llevar'|
+|'clean, pure'|'limpia, pura'|
+|'to meet, encounter'|reunirse, encontrar|
+|to write|escribir|
+|to add sugar|anadir azucar|
+|cup|tasa, copa|
+|to drink|beber, tomar|
+|to find|encontrar|
+|to sell|vender|
+|to see|ver, mirar|
+|Vocabulary|Vocabulário|
 |Auditive understanding exercise|Ejercicio de Comprensión Auditiva|
 |'You are going to hear a word or a sentence and you should write it in the available space. If your answer is correct, the word will appear on the panel; otherwise, the word would be repeated later. You must get at least 70% correct.'|'En el siguiente ejercicio escuchará una palabra o frase y deberá escribirla en el espacio destinado. Si acierta, la palabra aparecerá en el panel. De lo contrario, volverá a escuchar la palabra en otro momento. Deberá acertar al menos un 70%.'|
 |three|tres|
 |He is healthy.|Él está sano.|
 |He is healthy.|Él está sano.|
-|Exercises|undefined|
+|Exercises|Ejercicios|
 |Fill the available spaces with the missing letters to complete the translation. Remember to add the plural 'j' and the accusative 'n' when necessary. Press 'Enter' or click button when complete. You must get at least 70% correct.|undefined|
 |A healthy boy drinks warm milk.|undefined|
 |The old store doesn't sell dry cakes.|undefined|
