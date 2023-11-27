@@ -230,11 +230,11 @@
 |12. The old woman lives healthily.|12. La vieja mujer vive sanamente.|
 |'In the first lesson we saw that in Esperanto the adjectives singular and plural agree with the noun. The adjective, same as the noun, takes the 'j' ending when it is plural.'|undefined|
 |'Just the nouns needing a specific gender may show it, ending in 'o' if male, and 'ino' if female.'|undefined|
-|woman|undefined|
-|(female) friend|undefined|
-|daughter|undefined|
-|mother|undefined|
-|The big women|undefined|
+|woman|mujer|
+|(female) friend|amiga|
+|daughter|hija|
+|mother|madre|
+|The big women|La mujer grande|
 |He has good health.|Él tiene buena salud.|
 |Suffix -ino|undefined|
 |Exercises - Numerals|Ejercicio - Números|
@@ -252,16 +252,16 @@
 |Adverbs created from numerals|Adverbios de números|
 |Accusative (-n)|undefined|
 |The Prefix 'mal' allows us to create words with the opposite meaning of the original word.|undefined|
-|friend|undefined|
-|beautiful|undefined|
-|new|undefined|
-|To make a negative sentence it is enough to put the word 'ne' before the verb.|undefined|
-|I will not add sugar to the warm coffee.|undefined|
-|He isn't my brother.|undefined|
-|She isn't my mother.|undefined|
-|The cakes weren't warm.|undefined|
-|Negation|undefined|
-|Prefix 'mal'|undefined|
+|friend|amigo|
+|beautiful|bello|
+|new|nuevo|
+|To make a negative sentence it is enough to put the word 'ne' before the verb.|Para hacer una oración negativa, basta poner la palabra 'ne' antes del verbo.|
+|I will not add sugar to the warm coffee.|No añadiré azucar al café caliente.|
+|He isn't my brother.|Él no es mi hermano.|
+|She isn't my mother.|Ella no es mi madre.|
+|The cakes weren't warm.|Las tortas no estaban calientes.|
+|Negation|Negación|
+|Prefix 'mal'|Prefijo 'mal'|
 |He lives healthily.|Él vive sanamente.|
 |Adverbs|Adverbios|
 |Numerals|Números|
@@ -269,32 +269,32 @@
 |Translate to Esperanto:|Traduzca al Esperanto:|
 |one|uno|
 |nineteen|diecinueve|
-|water|undefined|
-|to love|undefined|
-|love|undefined|
-|bird|undefined|
+|water|agua|
+|to love|amar|
+|love|amor|
+|bird|pajaro|
 |store|undefined|
-|'to do, to make'|undefined|
-|to forget|undefined|
-|to have|undefined|
-|insect|undefined|
-|'to catch, capture'|undefined|
-|to wash|undefined|
-|lemonade|undefined|
-|paper|undefined|
-|to request|undefined|
-|'feather, pen'|undefined|
-|'to carry, to wear'|undefined|
-|'clean, pure'|undefined|
-|'to meet, encounter'|undefined|
-|to write|undefined|
-|to add sugar|undefined|
-|cup|undefined|
-|to drink|undefined|
-|to find|undefined|
-|to sell|undefined|
-|to see|undefined|
-|Vocabu ary|undefined|
+|'to do, to make'|'hacer'|
+|to forget|olvidar|
+|to have|tener|
+|insect|insecto|
+|'to catch, capture'|'atrapar'|
+|to wash|lavar|
+|lemonade|limonada|
+|paper|papel|
+|to request|pedir|
+|'feather, pen'|'pluma'|
+|'to carry, to wear'|'llevar'|
+|'clean, pure'|'limpio, puro'|
+|'to meet, encounter'|'encontrar'|
+|to write|escribir|
+|to add sugar|añadir azúcar|
+|cup|taza|
+|to drink|tomar|
+|to find|encontrar|
+|to sell|vender|
+|to see|ver|
+|Vocabulary|Vocabulario|
 |Auditive understanding exercise|Ejercicio de Comprensión Auditiva|
 |'You are going to hear a word or a sentence and you should write it in the available space. If your answer is correct, the word will appear on the panel; otherwise, the word would be repeated later. You must get at least 70% correct.'|'En el siguiente ejercicio escuchará una palabra o frase y deberá escribirla en el espacio destinado. Si acierta, la palabra aparecerá en el panel. De lo contrario, volverá a escuchar la palabra en otro momento. Deberá acertar al menos un 70%.'|
 |three|tres|
@@ -302,17 +302,17 @@
 |He is healthy.|Él está sano.|
 |Exercises|undefined|
 |Fill the available spaces with the missing letters to complete the translation. Remember to add the plural 'j' and the accusative 'n' when necessary. Press 'Enter' or click button when complete. You must get at least 70% correct.|undefined|
-|A healthy boy drinks warm milk.|undefined|
-|The old store doesn't sell dry cakes.|undefined|
-|The big teacher met the new friends.|undefined|
-|The new friends will make a good cake.|undefined|
-|The girl didn't find the sisters.|undefined|
-|'The small sister is sick, the brother is healthy.'|undefined|
-|The father will not wash the small cups.|undefined|
-|The beautiful bird caught a small insect.|undefined|
-|The boy was my old friend.|undefined|
-|The boys were great friends.|undefined|
-|Translate to Esperanto|undefined|
+|A healthy boy drinks warm milk.|El chico sano toma leche caliente.|
+|The old store doesn't sell dry cakes.|La vieja tienda no vende tortas secas.|
+|The big teacher met the new friends.|El profesor grande conoció a los nuevos amigos.|
+|The new friends will make a good cake.|Los nuevos amigos harán una torta buena.|
+|The girl didn't find the sisters.|La chica no encontró a las hermanas.|
+|'The small sister is sick, the brother is healthy.'|'La hermana pequeña está enferma, el hermano es saludable.'|
+|The father will not wash the small cups.|El padre no lavará las pequeñas tazas.|
+|The beautiful bird caught a small insect.|El pájaro hermoso atrapó un pequeño insecto.|
+|The boy was my old friend.|El chico era mi viejo amigo.|
+|The boys were great friends.|Los chicos eran buenos amigos.|
+|Translate to Esperanto|Traducir al Esperanto|
 |'The word order subject - verb - object is not compulsory, but it is the most used, and recommended to the beginner. After getting used to that order, it can be changed, always making sure that the sentence meaning doesn't change.'|'El orden de palabras Sujeto-Verbo-Complemento no es obligatorio. Sin embargo, es el más usado y por lo tanto se recomienda para los principiantes. Luego de acostumbrarse se puede usar otro, observando siempre que el sentido de la oración no cambia.'|
 |Common word order|Orden normal de palabras|
 |'Adverbs are similar to adjectives, but instead of modifying nouns, they modify verbs (or sometimes adjectives or even other adverbs). They don't change for plural. Generally they indicate manner (how), cause (why), time (when), location (where) or quantity (how much).'|'Los adverbios funcionan igual que los adjetivos, pero en lugar de definir las ideas expresadas por el sustantivo, ellos definen las ideas del verbo y los adjetivos, pero no reciben la terminación 'j'. Generalmente expresan modo, causa, tiempo o lugar.'|
