@@ -1,7 +1,17 @@
 Kurso de Esperanto Webapp
 ================
+## Badges
+[![GitHub stars](https://img.shields.io/github/stars/Esperanto/Kurso-de-Esperanto-Webapp?branch=master&label=Stars&logo=GitHub&logoColor=ffffff&labelColor=282828&color=informational&style=flat)]()
+[![GitHub forks](https://img.shields.io/github/forks/Esperanto/Kurso-de-Esperanto-Webapp?branch=master&label=Forks&logo=GitHub&logoColor=ffffff&labelColor=282828&color=informational&style=flat)]()
+[![GitHub watchers](https://img.shields.io/github/watchers/Esperanto/Kurso-de-Esperanto-Webapp?branch=master&label=Watchers&logo=GitHub&logoColor=ffffff&labelColor=282828&color=informational&style=flat)]()
+[![GitHub commits](https://badgen.net/github/commits/Esperanto/Kurso-de-Esperanto-Webapp)](https://GitHub.com/Esperanto/Kurso-de-Esperanto-Webapp/commit/)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Esperanto/Kurso-de-Esperanto-Webapp)
+[![GitHub branches](https://badgen.net/github/branches/Esperanto/Kurso-de-Esperanto-Webapp)](https://github.com/Esperanto/Kurso-de-Esperanto-Webapp/)
+[![GitHub release](https://img.shields.io/github/release/Esperanto/Kurso-de-Esperanto-Webapp.svg)](https://GitHub.com/Esperanto/Kurso-de-Esperanto-Webapp/releases/)
+![GitHub repo size](https://img.shields.io/github/repo-size/Esperanto/Kurso-de-Esperanto-Webapp)
 
-Kurso de Esperanto webapp is a  web application built from the resources of the free desktop application [Kurso de Esperanto 4](http://www.kurso.com.br/index.php?en)
+## Description
+**Kurso de Esperanto webapp** is a  web application built from the resources of the free desktop application [Kurso de Esperanto 4](http://www.kurso.com.br/index.php?en)
 
 <img align="center" src="https://raw.githubusercontent.com/benahm/Kurso-de-Esperanto-Webapp/master/app/img/screenshot1.png"/>
 
